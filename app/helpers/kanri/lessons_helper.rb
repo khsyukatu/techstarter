@@ -1,0 +1,2 @@
+module Kanri::LessonsHelper
+end

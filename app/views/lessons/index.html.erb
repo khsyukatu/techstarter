@@ -1,0 +1,16 @@
+<h1 class="page-header">レッスン一覧</h1>
+<div class="row">
+<% @lessons.each do |lesson| %>
+  <%= link_to lesson_path(lesson) do %>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <%= image_tag lesson.image %>
+      <div class="caption">
+        <h3><%= lesson.title %></h3>
+        <p><%= lesson.description %></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+<% end %>
+</div>

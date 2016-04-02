@@ -1,0 +1,24 @@
+<h1>レッスン一覧</h1>
+<table class="table table-hover ">
+  <thead>
+    <tr class="success">
+      <th>id</th>
+      <th>タイトル</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+    <tr>
+      <td><%= lesson.id %></td>
+      <td><%= lesson.title %></td>
+      <td><%= link_to "表示", kanri_lesson_path(lesson), class:"btn btn-success" %></td>
+      <td><%= link_to "編集", edit_kanri_lesson_path(lesson), class:"btn btn-success" %></td>
+      
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to "lessonを追加する", new_kanri_lesson_path, class:"btn btn-success" %>

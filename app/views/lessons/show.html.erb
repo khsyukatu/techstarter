@@ -1,0 +1,23 @@
+<h1 class="text-center">
+  <%= @lesson.title %>
+</h1>
+<p class="lead">
+  <%= @lesson.description %>
+</p>
+
+<% @chapters.each do |chapter| %>
+  <h2 class="page-header"><%= chapter.title %></h2>
+  <% chapter.posts.order("number").each do |post| %>
+    <% if post.post_type == 1 %>
+      <h2 class="page-header"><%= post.title %></h2>
+    <% elsif post.post_type == 2 %>
+      <%= qiita_markdown(post.body) %>
+    <% elsif post.post_type == 3 %>
+      <%= image_tag post.image, class:"img-responsive" %>
+    <% elsif post.post_type == 4 %>
+      <div class="embed-responsive embed-responsive-16by9">
+        <%= raw(post.movie) %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

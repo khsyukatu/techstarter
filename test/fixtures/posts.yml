@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id         :integer          not null, primary key
+#  chapter_id :integer
+#  number     :integer
+#  title      :string(255)
+#  body       :text
+#  image      :string(255)
+#  movie      :text
+#  post_type  :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chapter_id: 
+  number: 1
+  title: MyString
+  body: MyText
+  image: MyString
+  movie: MyText
+  post_type: 1
+
+two:
+  chapter_id: 
+  number: 1
+  title: MyString
+  body: MyText
+  image: MyString
+  movie: MyText
+  post_type: 1

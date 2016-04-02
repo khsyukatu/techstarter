@@ -1,0 +1,2 @@
+module Kanri::ChaptersHelper
+end

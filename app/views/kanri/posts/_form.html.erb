@@ -1,0 +1,9 @@
+<% if params[:post_type] == "1" or @post.post_type == 1 %>
+  <%= render 'title' %>
+<% elsif params[:post_type] == "2" or @post.post_type == 2 %>
+  <%= render 'text' %>
+<% elsif params[:post_type] == "3" or @post.post_type == 3 %>
+  <%= render 'image' %>
+<% elsif params[:post_type] == "4" or @post.post_type == 4 %>
+  <%= render 'movie' %>
+<% end %>
