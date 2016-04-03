@@ -23,7 +23,11 @@
     <div class="form-group">
       <label class="col-lg-2 control-label">表示順</label>
       <div class="col-lg-10">
-        <%= f.number_field :number ,class: "form-control" %>
+        <% if @post.number.blank? %>
+          <%= f.number_field :number , value: @chapter.posts.count + 1,class: "form-control" %>
+        <% else %>
+          <%= f.number_field :number ,class: "form-control" %>
+        <% end %>
       </div>
     </div>
     <div class="form-group">
