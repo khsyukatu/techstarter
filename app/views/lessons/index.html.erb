@@ -1,3 +1,10 @@
+<ul class="breadcrumb">
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/"><span itemprop="title">Home</span></a></li>
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/lessons" class="page" itemprop="url"><span itemprop="title">レッスン一覧</span></a></li>
+</ul>
+
 <h1 class="page-header">レッスン一覧</h1>
 <div class="row">
 <% @lessons.each do |lesson| %>
@@ -14,3 +21,4 @@
   <% end %>
 <% end %>
 </div>
+

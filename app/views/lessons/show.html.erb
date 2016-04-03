@@ -1,3 +1,12 @@
+<ul class="breadcrumb">
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/"><span itemprop="title">Home</span></a></li>
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/lessons" class="page" itemprop="url"><span itemprop="title">レッスン一覧</span></a></li>
+  	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+  		<a href="/lessons/<%= @lesson.id %>" class="page" itemprop="url"><span itemprop="title"><%= @lesson.title %></span></a></li>
+</ul>
+
 <h1 class="text-center">
   <%= @lesson.title %>
 </h1>
