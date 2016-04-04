@@ -1,3 +1,14 @@
+<ul class="breadcrumb">
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/kanri"><span itemprop="title">管理画面top</span></a></li>
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/kanri/lessons" class="page" itemprop="url"><span itemprop="title">レッスン一覧</span></a></li>
+  	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+  		<a href="/kanri/lessons/<%= @chapter.lesson.id %>" class="page" itemprop="url"><span itemprop="title"><%= @chapter.lesson.title %></span></a></li>
+  	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+  		<a href="/kanri/chapters/<%= @chapter.id %>" class="page" itemprop="url"><span itemprop="title"><%= @chapter.title %></span></a></li>
+</ul>
+
 <h1 class="page-header">チャプター追加</h1>
 <div class="btn-group btn-group-justified">
   <%= link_to "タイトル", new_kanri_post_path(post_type: 1, chapter_id: @chapter.id), class: "btn btn-success" %>

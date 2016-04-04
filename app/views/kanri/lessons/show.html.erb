@@ -1,3 +1,12 @@
+<ul class="breadcrumb">
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/kanri"><span itemprop="title">管理画面top</span></a></li>
+	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="/kanri/lessons" class="page" itemprop="url"><span itemprop="title">レッスン一覧</span></a></li>
+  	<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+  		<a href="/kanri/lessons/<%= @lesson.id %>" class="page" itemprop="url"><span itemprop="title"><%= @lesson.title %></span></a></li>
+</ul>
+
 <h1>「<%= @lesson.title %>」内容一覧</h1>
 <table class="table table-hover ">
   <thead>
