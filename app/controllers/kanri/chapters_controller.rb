@@ -10,6 +10,7 @@ class Kanri::ChaptersController < ApplicationController
   end
   
   def new
+    @lesson = Lesson.find(params[:lesson_id])
     @chapter = Chapter.new
   end
   
@@ -21,6 +22,7 @@ class Kanri::ChaptersController < ApplicationController
     if @chapter.save
       redirect_to kanri_lesson_path(@chapter.lesson), notice: "レッスンを作成しました。"
     else
+      @lesson = Lesson.find(@chapter.lesson_id)
       render :new, alert: "レッスン作成に失敗しました"
     end
   end
@@ -29,6 +31,7 @@ class Kanri::ChaptersController < ApplicationController
     if @chapter.update(chapter_params)
       redirect_to kanri_lesson_path(@chapter.lesson), notice: "レッスンを更新しました。"
     else
+      @lesson = Lesson.find(@chapter.lesson_id)
       render :new, alert: "レッスン更新に失敗しました。"
     end
   end
