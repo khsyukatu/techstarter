@@ -18,7 +18,7 @@
   <h2 class="page-header"><%= chapter.title %></h2>
   <% chapter.posts.order("number").each do |post| %>
     <% if post.post_type == 1 %>
-      <h2 class="page-header"><%= post.title %></h2>
+      <h3 class="h4">◆ <%= post.title %></h3>
     <% elsif post.post_type == 2 %>
       <%= qiita_markdown(post.body) %>
     <% elsif post.post_type == 3 %>
