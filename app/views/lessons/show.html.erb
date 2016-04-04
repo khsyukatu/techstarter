@@ -22,7 +22,12 @@
     <% elsif post.post_type == 2 %>
       <%= qiita_markdown(post.body) %>
     <% elsif post.post_type == 3 %>
-      <%= image_tag post.image, class:"img-responsive" %>
+      <div>
+        <%= image_tag post.image, class:"img-responsive" %>
+      </div>
+      <% if post.ref_url.present? %>
+        出典：<%= link_to post.ref_url, post.ref_url, target: :blank %>
+      <% end %>
     <% elsif post.post_type == 4 %>
       <div class="embed-responsive embed-responsive-16by9">
         <%= raw(post.movie) %>

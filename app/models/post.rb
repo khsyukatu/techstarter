@@ -12,6 +12,7 @@
 #  post_type  :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  ref_url    :string(255)
 #
 
 class Post < ActiveRecord::Base

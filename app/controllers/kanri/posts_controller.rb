@@ -40,6 +40,6 @@ class Kanri::PostsController < ApplicationController
   end
   
   def post_params
-    params.require(:post).permit(:chapter_id, :number, :title, :body, :image, :movie, :post_type)
+    params.require(:post).permit(:chapter_id, :number, :title, :body, :image, :movie, :post_type, :ref_url)
   end
 end

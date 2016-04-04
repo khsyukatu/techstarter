@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401034505) do
+ActiveRecord::Schema.define(version: 20160404193818) do
 
   create_table "chapters", force: true do |t|
     t.integer  "lesson_id"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160401034505) do
     t.integer  "post_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ref_url"
   end
 
   add_index "posts", ["chapter_id"], name: "index_posts_on_chapter_id"
