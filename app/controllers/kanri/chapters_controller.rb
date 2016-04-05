@@ -15,6 +15,7 @@ class Kanri::ChaptersController < ApplicationController
   end
   
   def edit
+    @lesson = Lesson.find(params[:lesson_id])
   end
   
   def create

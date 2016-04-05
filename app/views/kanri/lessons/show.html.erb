@@ -24,7 +24,7 @@
       <td><%= chapter.id %></td>
       <td><%= chapter.title %></td>
       <td><%= link_to "表示", kanri_chapter_path(chapter), class:"btn btn-success" %></td>
-      <td><%= link_to "編集", edit_kanri_chapter_path(chapter), class:"btn btn-success" %></td>
+      <td><%= link_to "編集", edit_kanri_chapter_path(chapter, lesson_id: @lesson.id), class:"btn btn-success" %></td>
       <td><%= link_to '削除', kanri_chapter_path(chapter), :method => :delete, data: { :confirm => "削除しますが、宜しいですか？" }, class: "btn btn-danger" %></td>
     </tr>
     <% end %>
