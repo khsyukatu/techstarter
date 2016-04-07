@@ -17,7 +17,7 @@ class LessonsController < ApplicationController
   end
   
   def show
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.where(status: true).find(params[:id])
     @chapters = @lesson.chapters
   end
 end
