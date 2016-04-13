@@ -13,7 +13,7 @@
 <p class="lead">
   <%= @lesson.description %>
 </p>
-
+<div class="article_area">
 <% @chapters.each do |chapter| %>
   <h2 class="page-header"><%= chapter.title %></h2>
   <% chapter.posts.order("number").each do |post| %>
@@ -22,7 +22,7 @@
     <% elsif post.post_type == 2 %>
       <%= qiita_markdown(post.body) %>
     <% elsif post.post_type == 3 %>
-      <div>
+      <div class="post_image">
         <%= image_tag post.image, class:"img-responsive" %>
       </div>
       <% if post.ref_url.present? %>
@@ -35,3 +35,4 @@
     <% end %>
   <% end %>
 <% end %>
+</div>

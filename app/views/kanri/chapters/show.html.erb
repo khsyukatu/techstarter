@@ -33,6 +33,7 @@
     </div>
     <div class="col-lg-3">
       <%= link_to "編集", edit_kanri_post_path(post) %>
+      <%= link_to '削除', kanri_post_path(post), :method => :delete, data: { :confirm => "削除しますが、宜しいですか？" } %>
     </div>
   </div>
   <% elsif post.post_type == 2 %>
@@ -42,6 +43,7 @@
     </div>
     <div class="col-lg-3">
       <%= link_to "編集", edit_kanri_post_path(post) %>
+      <%= link_to '削除', kanri_post_path(post), :method => :delete, data: { :confirm => "削除しますが、宜しいですか？" } %>
     </div>
   </div>
   <% elsif post.post_type == 3 %>
@@ -51,6 +53,7 @@
     </div>
     <div class="col-lg-3">
       <%= link_to "編集", edit_kanri_post_path(post) %>
+      <%= link_to '削除', kanri_post_path(post), :method => :delete, data: { :confirm => "削除しますが、宜しいですか？" } %>
     </div>
   </div>
   <% elsif post.post_type == 4 %>
@@ -62,6 +65,7 @@
     </div>
     <div class="col-lg-3">
       <%= link_to "編集", edit_kanri_post_path(post) %>
+      <%= link_to '削除', kanri_post_path(post), :method => :delete, data: { :confirm => "削除しますが、宜しいですか？" } %>
     </div>
   </div>
   <% end %>
