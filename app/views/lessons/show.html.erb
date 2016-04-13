@@ -17,22 +17,22 @@
 <% @chapters.each do |chapter| %>
   <h2 class="page-header"><%= chapter.title %></h2>
   <% chapter.posts.order("number").each do |post| %>
-    <% if post.post_type == 1 %>
-      <h3 class="h4">◆ <%= post.title %></h3>
-    <% elsif post.post_type == 2 %>
-      <%= qiita_markdown(post.body) %>
-    <% elsif post.post_type == 3 %>
-      <div class="post_image">
-        <%= image_tag post.image, class:"img-responsive" %>
-      </div>
-      <% if post.ref_url.present? %>
-        出典：<%= link_to post.ref_url, post.ref_url, target: :blank %>
+    <div class="post">
+      <% if post.post_type == 1 %>
+        <h3 class="h4">◆ <%= post.title %></h3>
+      <% elsif post.post_type == 2 %>
+        <%= qiita_markdown(post.body) %>
+      <% elsif post.post_type == 3 %>
+          <%= image_tag post.image, class:"img-responsive" %>
+        <% if post.ref_url.present? %>
+          出典：<%= link_to post.ref_url, post.ref_url, target: :blank %>
+        <% end %>
+      <% elsif post.post_type == 4 %>
+        <div class="embed-responsive embed-responsive-16by9">
+          <%= raw(post.movie) %>
+        </div>
       <% end %>
-    <% elsif post.post_type == 4 %>
-      <div class="embed-responsive embed-responsive-16by9">
-        <%= raw(post.movie) %>
-      </div>
-    <% end %>
+    </div>
   <% end %>
 <% end %>
 </div>
